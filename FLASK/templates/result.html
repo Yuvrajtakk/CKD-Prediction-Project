@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; text-align: center; margin-top: 50px; }
+        .result { font-size: 24px; padding: 20px; display: inline-block; border-radius: 8px; color: white; }
+        .positive { background-color: #e74c3c; } /* Red for positive diagnosis */
+        .negative { background-color: #2ecc71; } /* Green for negative diagnosis */
+        a { display: inline-block; margin-top: 20px; text-decoration: none; background-color: #5c67f2; color: white; padding: 10px 20px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <div class="result {{ 'positive' if 'Oops!' in prediction_text else 'negative' }}">
+        {{ prediction_text }}
+    </div>
+    <br>
+    <a href="/">Go Back</a>
+</body>
+</html>

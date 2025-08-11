@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CKD Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; text-align: center; margin-top: 50px; }
+        h1 { color: #333; }
+        form { background: white; padding: 20px; border-radius: 8px; display: inline-block; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input, select { width: 200px; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px; }
+        button { background-color: #5c67f2; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #4a54c4; }
+    </style>
+</head>
+<body>
+    <h1>Chronic Kidney Disease Prediction</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+        <input type="text" name="red_blood_cells" placeholder="Red Blood Cells (0=abnormal, 1=normal)" required="required" /><br>
+        <input type="text" name="pus_cell" placeholder="Pus Cell (0=abnormal, 1=normal)" required="required" /><br>
+        <input type="text" name="blood_glucose_random" placeholder="Blood Glucose Random (mg/dL)" required="required" /><br>
+        <input type="text" name="blood_urea" placeholder="Blood Urea (mg/dL)" required="required" /><br>
+        <input type="text" name="pedal_edema" placeholder="Pedal Edema (0=no, 1=yes)" required="required" /><br>
+        <input type="text" name="anemia" placeholder="Anemia (0=no, 1=yes)" required="required" /><br>
+        <input type="text" name="diabetes_mellitus" placeholder="Diabetes Mellitus (0=no, 1=yes)" required="required" /><br>
+        <input type="text" name="coronary_artery_disease" placeholder="Coronary Artery Disease (0=no, 1=yes)" required="required" /><br>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
