@@ -1,6 +1,13 @@
-# Ignore the Python virtual environment folder
 .venv/
-
-# Ignore Python cache files
+venv/
+env/
 __pycache__/
 *.pyc
+*.pyo
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.env
+tempCodeRunnerFile.py
